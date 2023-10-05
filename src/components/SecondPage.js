@@ -2,22 +2,22 @@ import { View, Text, Button, ImageBackground ,StyleSheet,Image,Pressable, TextIn
 import React from 'react';
 
 
-export default function FirstPage({navigation}) {
+export default function SecondPage({navigation}) {
   return (
      <View style={styles.box1}>
-        <ImageBackground source={require('./images/firstPagebg.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
+        <ImageBackground source={require('./images/SecondPagebg.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
 
         <View style={styles.container1}>
   
-        <Text style={styles.title1}>AgriGrow</Text>
+        <Text style={styles.title1}>Empowering Fields, Enhancing Yields</Text>
 
-        <Text style={styles.description}>...............................................................................................................</Text>
+        <Text style={styles.description}>“AgriGrow” seamlessly connects farmers with crucial resources, weather updates, market trends, and a supportive community to optimize crop yields and agricultural success.</Text>
 
         </View>
         <View style={styles.inputBox2}>
 
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Explore</Text></Pressable>
-
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signup} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Sign In</Text></Pressable>
         </View>
      
     </View>
@@ -27,8 +27,8 @@ export default function FirstPage({navigation}) {
 const styles = StyleSheet.create({
 box1:{
     backgroundColor:'#000',
-    width:'100%',
-    height:1000
+    width:'110%',
+    height:800
 
   },
 imagebg: {
@@ -43,16 +43,16 @@ container1: {
 },
 title1:{
     fontSize:36,
-    width:250,
+    width:350,
     marginLeft:37,
-    marginTop:215,
+    marginTop:145,
     color:'#000',
     fontWeight: 'bold'
 
 },
 description:{
     fontSize:16,
-    width:250,
+    width:319,
     marginLeft:37,
     marginTop:15,
     color:'#000',
@@ -61,11 +61,22 @@ description:{
 },
 signin:{
     marginTop:300,
-    marginLeft:120,
+    marginLeft:200,
     width:165,
     padding:20,
     height:63,
     backgroundColor:'#rgba(0, 68, 167, 1)',
+    borderRadius:20,
+    position:'absolute',
+    zIndex:100
+  },
+signup:{
+    marginTop:300,
+    marginLeft:30,
+    width:165,
+    padding:20,
+    height:63,
+    backgroundColor:'#rgba(29,147,117,1)',
     borderRadius:20,
     position:'absolute',
     zIndex:100
