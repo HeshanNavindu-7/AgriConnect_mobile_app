@@ -5,10 +5,11 @@ import Signin from './src/components/Sign_In';
 import Signup from './src/components/Sign_Up';
 import FirstPage from './src/components/FirstPage';
 import SecondPage from './src/components/SecondPage';
+import OTP from './src/components/Ots';
 
 export default function App() {
   return (
-    <SecondPage/>
+    <OTP/>
   );
 }
 
