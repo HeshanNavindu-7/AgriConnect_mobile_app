@@ -23,7 +23,7 @@ export default function Signin({navigation}) {
 
          <Pressable style={styles.fogpass} ><Text style={styles.fogpass1}>Forgot your password?</Text></Pressable>
 
-         <Pressable style={styles.signin} ><Text style={styles.signin1}>Sign in</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> navigation.navigate("Home")}><Text style={styles.signin1}>Sign in</Text></Pressable>
 
        </View>
 

@@ -29,7 +29,7 @@ export default function Signup({navigation}) {
 
          
 
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Home")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("otp")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
 
 
        </View>
