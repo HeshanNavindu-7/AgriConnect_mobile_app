@@ -5,7 +5,11 @@ import Signin from './src/components/Sign_In';
 import Signup from './src/components/Sign_Up';
 import FirstPage from './src/components/FirstPage';
 import SecondPage from './src/components/SecondPage';
+
 import Home from './src/components/Screens/Home1';
+
+import OTP from './src/components/Ots';
+
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -137,6 +141,8 @@ export default function App() {
     <NavigationContainer>
     <MyTabs />
   </NavigationContainer>
+
+ 
   );
 }
 
