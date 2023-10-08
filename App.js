@@ -10,13 +10,13 @@ import Home from './src/components/Screens/Home1';
 
 import OTP from './src/components/Ots';
 
-
+import {createStackNavigator} from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home1 from './src/components/Screens/Home1';
 import Prediction1 from './src/components/Screens/Prediction1';
 import Market1 from './src/components/Screens/Market1';
-import Profile1 from './src/components/Screens/profile1';
+import Profile1 from './src/components/Screens/Profile1';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -136,11 +136,23 @@ function MyTabs() {
     </Tab.Navigator>
   );
 }
+
+const Stack = createStackNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
-    <MyTabs />
-  </NavigationContainer>
+       <Stack.Navigator screenOptions={{headerShown:false}}  >
+       <Stack.Screen name="firstpage" component={FirstPage} />
+        <Stack.Screen name="SecondPage" component={SecondPage} />
+        <Stack.Screen name="signin" component={Signin} />
+        <Stack.Screen name="signup" component={Signup} />
+        <Stack.Screen name="otp" component={OTP} />
+        <Stack.Screen name="Home"   component={HomeScreen} />
+        <Stack.Screen name="Tab"   component={MyTabs} />
+      </Stack.Navigator>
+    
+    </NavigationContainer>
 
  
   );

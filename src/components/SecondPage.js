@@ -16,8 +16,8 @@ export default function SecondPage({navigation}) {
         </View>
         <View style={styles.inputBox2}>
 
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
-         <Pressable style={styles.signup} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Sign In</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("signup")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signup} onPress={()=>navigation.navigate("signin")} ><Text style={styles.signin1}>Sign In</Text></Pressable>
         </View>
      
     </View>

@@ -23,7 +23,7 @@ export default function Signin({navigation}) {
 
          <Pressable style={styles.fogpass} ><Text style={styles.fogpass1}>Forgot your password?</Text></Pressable>
 
-         <Pressable style={styles.signin} ><Text style={styles.signin1}>Sign in</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> navigation.navigate("Tab")}><Text style={styles.signin1}>Sign in</Text></Pressable>
 
        </View>
 
@@ -52,7 +52,9 @@ export default function Signin({navigation}) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor:'#000',
+    width:'100%',
+    height:770
   },
   btns:{
     position:'absolute',
@@ -188,13 +190,13 @@ const styles = StyleSheet.create({
     
   },
   frmgpadd:{
-    marginTop:60,
+    marginTop:80,
   },
   frmg:{
     fontSize:16,
     backgroundColor:'rgba(40, 38, 53, 0.5)',
     height:57,
-    marginTop:30,
+    marginTop:15,
     padding:10,
     width:344,
     marginLeft:20,
@@ -263,8 +265,6 @@ const styles = StyleSheet.create({
     height:1000,
     left:120,
     backgroundColor:'#000'
-
-
 
   },
   background:{

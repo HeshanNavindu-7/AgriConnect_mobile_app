@@ -17,7 +17,7 @@ export default function OTP({navigation}) {
         <Text style={styles.description}>Enter the verification code we just sent to your number +94 *******53.</Text>
         </View>
         <View style={styles.inputBox2}>
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("SecondPage")} ><Text style={styles.signin1}>Verify</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Tab")} ><Text style={styles.signin1}>Verify</Text></Pressable>
         </View>
 
         <View style={styles.inputBox1}>
@@ -104,15 +104,15 @@ description:{
 inputBox2:{
     color:'#fff',
     position:'absolute',
-    top:350
+    top:525
 },
 signin:{
-  marginTop:220,
+  marginTop:40,
   marginLeft:70,
   width:250,
   padding:20,
   height:63,
-  backgroundColor:'rgba(29,147,117,1)',
+  backgroundColor:'#rgba(0, 68, 167, 1)',
   borderRadius:20,
   position:'absolute',
   zIndex:10,
@@ -128,10 +128,9 @@ signin1:{
 inputBox1:{
   backgroundColor:'#fff',
   width:'100%',
-  height:500,
+  height:100,
   top:250
 },
-
 
 inputBox3:{
   position:'absolute',
