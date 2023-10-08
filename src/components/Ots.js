@@ -17,7 +17,7 @@ export default function OTP({navigation}) {
         <Text style={styles.description}>Enter the verification code we just sent to your number +94 *******53.</Text>
         </View>
         <View style={styles.inputBox2}>
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Home")} ><Text style={styles.signin1}>Verify</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Tab")} ><Text style={styles.signin1}>Verify</Text></Pressable>
         </View>
 
         <View style={styles.inputBox1}>
