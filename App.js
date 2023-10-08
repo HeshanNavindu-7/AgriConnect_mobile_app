@@ -16,7 +16,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home1 from './src/components/Screens/Home1';
 import Prediction1 from './src/components/Screens/Prediction1';
 import Market1 from './src/components/Screens/Market1';
-import Profile1 from './src/components/Screens/profile1';
+import Profile1 from './src/components/Screens/Profile1';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
