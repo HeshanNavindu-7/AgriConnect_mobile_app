@@ -1,8 +1,27 @@
 import { View, Text, Button, ImageBackground ,StyleSheet,Image,Pressable, TextInput}  from 'react-native';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 export default function Signin({navigation}) {
+
+  const [username , setUsername] = useState("");
+  const [password , setPassword] = useState("");
+
+  
+  const [isSumbit , setisSumbit] = useState(false);
+
+  const getApidata = async () => {
+    const url = "http://localhost/Tad%20Hack/TadHack-BackEnd/public/api/sign-in";
+    let result = await fetch (url);
+    result = await result.json();
+    setUsername(result)
+  }
+
+  useEffect(() => {
+    getApidata()
+  },[])
+  
+
   return (
      <View style={styles.container} >
     
@@ -10,12 +29,23 @@ export default function Signin({navigation}) {
 
      <View style={styles.container1}>
        
-       <Text style={styles.title1}>Sign in</Text>
+       <Text style={styles.title1}>Sign In</Text>
 
        <View style={styles.inputBox1}>
 
-        <TextInput placeholder='Email' placeholderTextColor='#fff' style={[styles.frmg,styles.frmgpadd]}></TextInput>
-        <TextInput placeholder='Passoword' placeholderTextColor='#fff' secureTextEntry style={styles.frmg}></TextInput>
+        <TextInput 
+          placeholder='Email' 
+          placeholderTextColor='#fff' 
+          style={[styles.frmg,styles.frmgpadd]}
+          onChangeText={(text)=>setUsername(text)}>
+        </TextInput>
+
+        <TextInput 
+          placeholder='Passoword' 
+          placeholderTextColor='#fff' 
+          secureTextEntry style={styles.frmg}
+          onChangeText={(text)=>setPassword(text)}>
+        </TextInput>
 
 
        </View>
@@ -23,7 +53,7 @@ export default function Signin({navigation}) {
 
          <Pressable style={styles.fogpass} ><Text style={styles.fogpass1}>Forgot your password?</Text></Pressable>
 
-         <Pressable style={styles.signin} onPress={()=> navigation.navigate("Tab")}><Text style={styles.signin1}>Sign in</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> {navigation.navigate("Tab");setisSumbit(true)}}><Text style={styles.signin1}>Sign in</Text></Pressable>
 
        </View>
 
