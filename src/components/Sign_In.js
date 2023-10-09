@@ -29,7 +29,7 @@ export default function Signin({navigation}) {
 
      <View style={styles.container1}>
        
-       <Text style={styles.title1}>Sign In</Text>
+       <Text style={styles.title1}>Sign in</Text>
 
        <View style={styles.inputBox1}>
 
@@ -53,7 +53,7 @@ export default function Signin({navigation}) {
 
          <Pressable style={styles.fogpass} ><Text style={styles.fogpass1}>Forgot your password?</Text></Pressable>
 
-         <Pressable style={styles.signin} onPress={()=> {navigation.navigate("Tab");setisSumbit(true)}}><Text style={styles.signin1}>Sign in</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> {navigation.navigate("Tab")}}><Text style={styles.signin1}>Sign in</Text></Pressable>
 
        </View>
 
