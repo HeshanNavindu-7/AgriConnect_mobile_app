@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React, {useContext} from 'react';
 import CustomLebel from './src/components/CustomLebel';
 import Signin from './src/components/Sign_In';
 import Signup from './src/components/Sign_Up';
@@ -19,6 +20,10 @@ import Market1 from './src/components/Screens/Market1';
 import Profile1 from './src/components/Screens/Profile1';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import {AuthContext} from './src/components/AuthContext';
+import SplashScreen from './src/components/SplashScreen';
+import {AuthProvider} from './src/components/AuthContext';
+import Navigation from './src/components/navigation';
 
 function HomeScreen() {
   return (
@@ -141,20 +146,12 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-       <Stack.Navigator screenOptions={{headerShown:false}}  >
-       <Stack.Screen name="firstpage" component={FirstPage} />
-        <Stack.Screen name="SecondPage" component={SecondPage} />
-        <Stack.Screen name="signin" component={Signin} />
-        <Stack.Screen name="signup" component={Signup} />
-        <Stack.Screen name="otp" component={OTP} />
-        <Stack.Screen name="Home"   component={HomeScreen} />
-        <Stack.Screen name="Tab"   component={MyTabs} />
-      </Stack.Navigator>
-    
-    </NavigationContainer>
-
- 
+    <AuthProvider>
+      <StatusBar backgroundColor="#06bcee" />
+      <Navigation />
+    </AuthProvider>
   );
-}
+};
+
+
 

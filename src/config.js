@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://localhost/Tad%20Hack/TadHack-BackEnd/public/api/sign-in';
