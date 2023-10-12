@@ -1,7 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React, {createContext, useEffect, useState} from 'react';
-import {BASE_URL} from '../config';
+import {BASE_URL,SIGNIN_URL} from '../config';
+import Navigation from './navigation';
+
 
 export const AuthContext = createContext();
 
@@ -14,7 +16,7 @@ export const AuthProvider = ({children}) => {
     setIsLoading(true);
 
     axios
-      .post(`${BASE_URL}/register`, {
+      .post(`${BASE_URL}/sign-in`, {
         name,
         email,
         password,
@@ -34,18 +36,28 @@ export const AuthProvider = ({children}) => {
 
   const login = (email, password) => {
     setIsLoading(true);
-
+    
     axios
-      .post(`${BASE_URL}/login`, {
+      .post(`${BASE_URL}/sign-in`, {
         email,
         password,
       })
       .then(res => {
-        let userInfo = res.data;
-        console.log(userInfo);
-        setUserInfo(userInfo);
-        AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
-        setIsLoading(false);
+
+        if(res.data.success){
+
+          let userInfo = res.data.data;
+        
+          console.log(userInfo);
+          setUserInfo(userInfo);
+          AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+          setIsLoading(false);
+        }
+        else{
+          console.log(JSON.stringify(`Loin failed: `+res.data.message));
+          setIsLoading(false);
+        }
       })
       .catch(e => {
         console.log(`login error ${e}`);
@@ -54,27 +66,11 @@ export const AuthProvider = ({children}) => {
   };
 
   const logout = () => {
-    setIsLoading(true);
-
-    axios
-      .post(
-        `${BASE_URL}/logout`,
-        {},
-        {
-          headers: {Authorization: `Bearer ${userInfo.access_token}`},
-        },
-      )
-      .then(res => {
-        console.log(res.data);
-        AsyncStorage.removeItem('userInfo');
-        setUserInfo({});
-        setIsLoading(false);
-      })
-      .catch(e => {
-        console.log(`logout error ${e}`);
-        setIsLoading(false);
-      });
+    AsyncStorage.removeItem('userInfo');
+    setUserInfo({});
+    setIsLoading(false);
   };
+
 
   const isLoggedIn = async () => {
     try {

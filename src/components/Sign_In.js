@@ -86,8 +86,6 @@ const styles = StyleSheet.create({
     zIndex:100,
     left:50,
 
-
-
   },
   imgf:{
     width:40,

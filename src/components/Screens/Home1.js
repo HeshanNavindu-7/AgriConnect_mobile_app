@@ -1,20 +1,23 @@
 
-import React from 'react'
+import React ,{useContext} from 'react'
 import { Ionicons } from '@expo/vector-icons'; 
 import { View, Text, StyleSheet, TouchableOpacity,Image,ImageBackground,Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from '../AuthContext';
 
 const image = {uri: 'https://media.istockphoto.com/id/1413584336/photo/astronaut-spacewalk-in-space-and-touching-orb-of-light.webp?b=1&s=170667a&w=0&k=20&c=ougmkUUwziBqoE_bwPecLgQUs4oATwFgAxrLHfRToe0='};
 
 const Home1 = () => {
+  const{userInfo,isLoading,logout} = useContext(AuthContext)
+
   return (
 <View style={styles.container}>
       <View style={styles.container1}>
       <ImageBackground source={image} resizeMode="cover" style={styles.image}>
     <Text style={styles.tpcard}>Adventure Begins Here</Text>
          
-        <TouchableOpacity style={styles.button}  onPress={()=> navigation.navigate("Booking")}>
-          <Text style={styles.buttonText}>Buy Now</Text>
+        <TouchableOpacity style={styles.button}  onPress={logout}>
+          <Text style={styles.buttonText}>logout</Text>
         </TouchableOpacity>
         </ImageBackground>
 

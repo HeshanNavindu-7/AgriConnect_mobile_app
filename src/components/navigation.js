@@ -147,36 +147,29 @@ const Navigation = () => {
       <NavigationContainer>
          
          <Stack.Navigator screenOptions={{headerShown:false}}  >
-         <Stack.Screen name="firstpage" component={FirstPage} />
-          <Stack.Screen name="SecondPage" component={SecondPage} />
+         
          {splashLoading ? (
             <Stack.Screen
               name="Splash Screen"
               component={SplashScreen}
               options={{headerShown: false}}
             />
-          ) : userInfo.access_token ? (
-            <Stack.Screen name="Home" component={HomeScreen} />
+          ) : userInfo.username ? (
+            <Stack.Screen name="Tab"   component={MyTabs} />
           ) : (
             <>
+            <Stack.Screen name="firstpage" component={FirstPage} />
+            <Stack.Screen name="SecondPage" component={SecondPage} />
               <Stack.Screen
                 name="signin"
                 component={Signin}
                 options={{headerShown: false}}
               />
-              {/* <Stack.Screen
-                name="Register"
-                component={RegisterScreen}
-                options={{headerShown: false}}
-              /> */}
             </>
           )}
          
-          {/* <Stack.Screen name="signin" component={Signin} /> */}
           <Stack.Screen name="signup" component={Signup} />
           <Stack.Screen name="otp" component={OTP} />
-          {/* <Stack.Screen name="Home"   component={HomeScreen} /> */}
-          <Stack.Screen name="Tab"   component={MyTabs} />
         </Stack.Navigator>
       
       </NavigationContainer>
