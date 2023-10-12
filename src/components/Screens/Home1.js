@@ -1,44 +1,74 @@
-
-import React from 'react'
-import { Ionicons } from '@expo/vector-icons'; 
-import { View, Text, StyleSheet, TouchableOpacity,Image,ImageBackground,Pressable } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Button, TouchableOpacity, Image, ImageBackground, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const image = {uri: 'https://media.istockphoto.com/id/1413584336/photo/astronaut-spacewalk-in-space-and-touching-orb-of-light.webp?b=1&s=170667a&w=0&k=20&c=ougmkUUwziBqoE_bwPecLgQUs4oATwFgAxrLHfRToe0='};
+const image = { uri: 'https://media.istockphoto.com/id/1413584336/photo/astronaut-spacewalk-in-space-and-touching-orb-of-light.webp?b=1&s=170667a&w=0&k=20&c=ougmkUUwziBqoE_bwPecLgQUs4oATwFgAxrLHfRToe0=' };
 
 const Home1 = () => {
-  return (
-<View style={styles.container}>
-      <View style={styles.container1}>
-      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-    <Text style={styles.tpcard}>Adventure Begins Here</Text>
-         
-        <TouchableOpacity style={styles.button}  onPress={()=> navigation.navigate("Booking")}>
-          <Text style={styles.buttonText}>Buy Now</Text>
-        </TouchableOpacity>
-        </ImageBackground>
+  const navigation = useNavigation();
 
+  return (
+    <View style={styles.container}>
+      <View style={styles.container1}>
+        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+          <Text style={styles.tpcard}>Adventure Begins Here</Text>
+
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Booking")}>
+            <Text style={styles.buttonText}>Buy Now</Text>
+          </TouchableOpacity>
+        </ImageBackground>
       </View>
-     
-       <Text style={styles.title}>Services</Text>
-       <View style={styles.rowContainer1}>
-       <TouchableOpacity style={styles.card1} >
-       <Image source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6b3t6XVKALhGXChbCBsn8eZ3CyraSrKYow&usqp=CAU'}}
-       style={{width: 100, height: 100, borderRadius:12 ,marginLeft:20,marginTop:8}} />
-          <Text  style={styles.cardtext1} > The Capsule</Text>
+
+      <Text style={styles.title}>Services</Text>
+      <View style={styles.rowContainer1}>
+        <TouchableOpacity style={styles.card1} >
+          <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6b3t6XVKALhGXChbCBsn8eZ3CyraSrKYow&usqp=CAU' }}
+            style={{ width: 100, height: 100, borderRadius: 12, marginLeft: 20, marginTop: 8 }} />
+          <Text style={styles.cardtext1} > The Capsule</Text>
         </TouchableOpacity>
-       <TouchableOpacity style={styles.card1} >
-       <Image source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSYz7e8gX5sjOpGBBrwpDV9OU_JCceucAwg&usqp=CAU'}}
-       style={{width: 100, height: 100, borderRadius:12 ,marginLeft:20,marginTop:8}} />
-          <Text  style={styles.cardtext1} > The Capsule</Text>
+        <TouchableOpacity style={styles.card1} >
+          <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmSYz7e8gX5sjOpGBBrwpDV9OU_JCceucAwg&usqp=CAU' }}
+            style={{ width: 100, height: 100, borderRadius: 12, marginLeft: 20, marginTop: 8 }} />
+          <Text style={styles.cardtext1} > The Capsule</Text>
         </TouchableOpacity>
-       <TouchableOpacity style={styles.card1} >
-       <Image source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6b3t6XVKALhGXChbCBsn8eZ3CyraSrKYow&usqp=CAU'}}
-       style={{width: 100, height: 100, borderRadius:12 ,marginLeft:20,marginTop:8}} />
-          <Text  style={styles.cardtext1} > The Capsule</Text>
+        <TouchableOpacity style={styles.card1} >
+          <Image source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6b3t6XVKALhGXChbCBsn8eZ3CyraSrKYow&usqp=CAU' }}
+            style={{ width: 100, height: 100, borderRadius: 12, marginLeft: 20, marginTop: 8 }} />
+          <Text style={styles.cardtext1} > The Capsule</Text>
         </TouchableOpacity>
-      
-       </View>
+      </View>
+      <View>
+        <Text style={{
+          color: '#000',
+          fontSize: 18,
+          marginTop: 15,
+          marginLeft: 15,
+        }}> Featured Products</Text>
+        <View style={styles.McardList}>
+          <View style={styles.Mcard}>
+            <TouchableOpacity style={styles.card1}>
+              <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
+                style={{ width: 170, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>caraway seeds</Text>
+              <View style={styles.priceAndCart}>
+                <Text style={styles.price}>$20.99</Text>
+                <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.Mcard}>
+            <TouchableOpacity style={styles.card1}>
+              <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
+                style={{ width: 170, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>caraway seeds</Text>
+              <View style={styles.priceAndCart}>
+                <Text style={styles.price}>$20.99</Text>
+                <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
     </View>
   );
 };
@@ -47,26 +77,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffff',
-    height:100,
-    
-    
-    
-    
   },
-  
-  rowContainer:{
-    flexDirection: 'row-reverse',
-    alignItems: 'center',
-  },
-  image:{
-    
-    
-    marginTop: 30,
-    marginHorizontal:20,
-   
-    elevation: 2,
-  },
-  rowContainer1:{
+  rowContainer1: {
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -74,62 +86,81 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000',
-    padding:10,
-    marginLeft:15,
+    padding: 10,
+    marginLeft: 15,
   },
-  title1: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  card1: {
+    height: 110,
+    width: 110,
+    backgroundColor: '#fff',
+    borderWidth: 0.2,
+    borderColor: '#000',
+    borderRadius: 12,
+    marginLeft: 20,
+  },
+  cardtext1: {
+    textAlign: 'center',
     color: '#000',
-    margin:25,
-    position:'relative'
+    justifyContent: 'center',
   },
-  card:{
-    height:120,
-    width:120,
-    backgroundColor:'#020011',
-    borderWidth:1,
-    borderColor:'#000',
-    borderRadius: 10,
-   padding:10,
-   marginLeft:3,
-   marginBottom:7,
-   marginRight:1,
-    elevation: 3,
+  priceAndCart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    margin: 10,
   },
-  card1:{
-    height:110,
-    width:110,
-    backgroundColor:'#fff',
-    borderWidth:0.2,
-    borderColor:'#000',
-    borderRadius: 10,
-    marginLeft:20,
+  price: {
+    fontSize: 16,
+    fontWeight: 'bold',
   },
-  cardtext:{
-    textAlign:'center',
-    color:'#000',
-    justifyContent:'center',
+  McardList: {
+    margin: 16,
+    flexDirection: 'row',
+    display: 'flex',
+    justifyContent: 'space-evenly', // Space between cards
+    flexWrap: 'wrap',
   },
-  cardtext1:{
-    textAlign:'center',
-    color:'#000',
-    
-    justifyContent:'center',
+  Mcard: {
+    height: 200,
+    width: 170,
+    borderRadius: 12,
+    borderColor: '#000',
+    borderWidth: 0.5,
   },
-  card2: {
-    backgroundColor: '#201F2E',
-   
+  cardtext1: {
+    fontSize: 16,
+    marginLeft: 10,
+    color: '#000',
+    fontWeight: 'bold',
+  },
+  Msec1: {},
+  Msbtn: {
+    alignItems: 'flex-end',
+    backgroundColor: '#1D9375',
+    paddingRight: 30,
+    height: 40,
+    width: 'auto',
+  },
+  Msearch: {
+    padding: 10,
+  },
+  container1: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  image: {
+    marginTop: 30,
+    marginHorizontal: 20,
+    elevation: 2,
   },
   tpcard: {
-    padding:25,
+    padding: 25,
     color: '#fff',
     fontSize: 25,
   },
   button: {
     backgroundColor: '#0044A7',
     borderRadius: 5,
-   
     paddingVertical: 8,
     paddingHorizontal: 15,
     alignSelf: 'flex-end',
@@ -140,11 +171,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 14,
   },
-  topic: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginLeft: 25,
-  },
 });
-export default Home1 ;
+
+export default Home1;
