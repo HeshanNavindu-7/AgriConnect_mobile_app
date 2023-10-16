@@ -37,7 +37,7 @@ function PredictionScreen() {
 }
 function MarketScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View >
       <Market1></Market1>
     </View>
   );
