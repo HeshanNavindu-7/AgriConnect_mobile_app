@@ -4,7 +4,6 @@ import React, {createContext, useEffect, useState} from 'react';
 import {BASE_URL,SIGNIN_URL} from '../config';
 import Navigation from './navigation';
 
-
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
@@ -12,14 +11,15 @@ export const AuthProvider = ({children}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
 
-  const register = (name, email, password) => {
+  const register = (name, email,number,password) => {
     setIsLoading(true);
 
     axios
-      .post(`${BASE_URL}/sign-in`, {
+      .post(`${BASE_URL}/sign-up`, {
         name,
         email,
         password,
+        number
       })
       .then(res => {
         let userInfo = res.data;
