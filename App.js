@@ -7,7 +7,7 @@ import FirstPage from './src/components/FirstPage';
 import SecondPage from './src/components/SecondPage';
 
 import Home from './src/components/Screens/Home1';
-
+import GoogleViewer from './src/components/Screens/GoogleViewer';
 import OTP from './src/components/Ots';
 
 import {createStackNavigator} from '@react-navigation/stack';
@@ -31,7 +31,7 @@ function HomeScreen() {
 function PredictionScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Prediction1></Prediction1>
+      <Prediction1>  </Prediction1>
     </View>
   );
 }
@@ -150,6 +150,8 @@ export default function App() {
         <Stack.Screen name="otp" component={OTP} />
         <Stack.Screen name="Home"   component={HomeScreen} />
         <Stack.Screen name="Tab"   component={MyTabs} />
+        <Stack.Screen name="Prediction1" component={Prediction1} />
+        <Stack.Screen name="GoogleViewer" component={GoogleViewer} />
       </Stack.Navigator>
     
     </NavigationContainer>
