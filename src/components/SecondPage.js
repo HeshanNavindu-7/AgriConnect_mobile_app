@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 box1:{
     backgroundColor:'#000',
     width:'110%',
-    height:800
+    height:844
 
   },
 imagebg: {

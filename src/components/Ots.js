@@ -43,10 +43,7 @@ export default function OTP({navigation}) {
 
        </View>
       
-        <View style={styles.box3}>
-
-        </View>
-     
+       
     </View>
   )
 }

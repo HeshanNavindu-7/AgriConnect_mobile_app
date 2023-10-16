@@ -11,7 +11,7 @@ export default function FirstPage({navigation}) {
   
         <Text style={styles.title1}>AgriGrow</Text>
 
-        <Text style={styles.description}>...............................................................................................................</Text>
+        <Text style={styles.description}>Sowing the Seeds of Sustainability.</Text>
 
         </View>
         <View style={styles.inputBox2}>
@@ -51,8 +51,8 @@ title1:{
 
 },
 description:{
-    fontSize:16,
-    width:250,
+    fontSize:18,
+ 
     marginLeft:37,
     marginTop:15,
     color:'#000',

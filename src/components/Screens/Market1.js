@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, Pressable, TouchableOpacity, Image, Button } from 'react-native';
+import { View, Text, TextInput, StyleSheet,ImageBackground, Pressable, TouchableOpacity, Image, Button } from 'react-native';
 
 const Market1 = () => {
   const [text, setText] = useState('');
 
   return (
     <View style={styles.Msec1}>
+    <ImageBackground source={require('./Screenimages/predictionbg.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
+
       <View style={styles.inputBox1}>
         <TextInput
           style={{

@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor:'#000',
     width:'100%',
-    height:770
+    height:844
   },
   btns:{
     position:'absolute',
