@@ -11,12 +11,12 @@ export default function SecondPage({navigation}) {
   
         <Text style={styles.title1}>Empowering Fields, Enhancing Yields</Text>
 
-        <Text style={styles.description}>“AgriGrow” seamlessly connects farmers with crucial resources, weather updates, market trends, and a supportive community to optimize crop yields and agricultural success.</Text>
+        <Text style={styles.description}>“AgriConnect” seamlessly connects farmers with crucial resources, weather updates, market trends, and a supportive community to optimize crop yields and agricultural success.</Text>
 
         </View>
         <View style={styles.inputBox2}>
 
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("signup")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("signup")} ><Text style={styles.signin2}>Sign Up</Text></Pressable>
          <Pressable style={styles.signup} onPress={()=>navigation.navigate("signin")} ><Text style={styles.signin1}>Sign In</Text></Pressable>
         </View>
      
@@ -45,7 +45,7 @@ title1:{
     fontSize:36,
     width:350,
     marginLeft:37,
-    marginTop:145,
+    marginTop:165,
     color:'#000',
     fontWeight: 'bold'
 
@@ -65,8 +65,9 @@ signin:{
     width:165,
     padding:20,
     height:63,
-    backgroundColor:'#rgba(0, 68, 167, 1)',
-    borderRadius:20,
+   borderColor:'#000',
+   borderWidth:2,
+    borderRadius:15,
     position:'absolute',
     zIndex:100
   },
@@ -77,13 +78,20 @@ signup:{
     padding:20,
     height:63,
     backgroundColor:'#rgba(29,147,117,1)',
-    borderRadius:20,
+    borderRadius:15,
     position:'absolute',
     zIndex:100
   },
 
   signin1:{
     color:'#fff',
+    textAlign:'center',
+    fontSize:19,
+    marginTop:-4
+
+  },
+  signin2:{
+    color:'#000',
     textAlign:'center',
     fontSize:19,
     marginTop:-4

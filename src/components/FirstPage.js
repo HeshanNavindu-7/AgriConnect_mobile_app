@@ -9,7 +9,7 @@ export default function FirstPage({navigation}) {
 
         <View style={styles.container1}>
   
-        <Text style={styles.title1}>AgriGrow</Text>
+        <Text style={styles.title1}>AgriConnect</Text>
 
         <Text style={styles.description}>Sowing the Seeds of Sustainability.</Text>
 
@@ -42,10 +42,11 @@ container1: {
     
 },
 title1:{
-    fontSize:36,
+    fontSize:40,
     width:250,
-    marginLeft:37,
-    marginTop:215,
+    marginLeft:75,
+    marginTop:275,
+    textAlign:'center',
     color:'#000',
     fontWeight: 'bold'
 
@@ -53,10 +54,10 @@ title1:{
 description:{
     fontSize:18,
  
-    marginLeft:37,
+    marginLeft:55,
     marginTop:15,
     color:'#000',
-    fontWeight: 'bold'
+    
 
 },
 signin:{
@@ -65,8 +66,8 @@ signin:{
     width:165,
     padding:20,
     height:63,
-    backgroundColor:'#rgba(0, 68, 167, 1)',
-    borderRadius:20,
+    backgroundColor:'#rgba(29, 143, 117, 1)',
+    borderRadius:15,
     position:'absolute',
     zIndex:100
   },
@@ -74,7 +75,7 @@ signin:{
   signin1:{
     color:'#fff',
     textAlign:'center',
-    fontSize:19,
+    fontSize:20,
     marginTop:-4
 
   },

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Button, TouchableOpacity, Image, ImageBackground, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const image = { uri: 'https://media.istockphoto.com/id/1413584336/photo/astronaut-spacewalk-in-space-and-touching-orb-of-light.webp?b=1&s=170667a&w=0&k=20&c=ougmkUUwziBqoE_bwPecLgQUs4oATwFgAxrLHfRToe0=' };
+const image = { uri: 'https://pixabay.com/photos/barley-field-wheat-agriculture-plow-1684052/' };
 
 const Home1 = () => {
   const navigation = useNavigation();
@@ -10,11 +10,11 @@ const Home1 = () => {
   return (
     <View style={styles.container}>
       <View style={styles.container1}>
-        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
-          <Text style={styles.tpcard}>Adventure Begins Here</Text>
+        <ImageBackground source={require('./img/s3.png') } resizeMode="cover" style={styles.image}>
+          <Text style={styles.tpcard}>The Art and Science of Agriculture</Text>
 
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Booking")}>
-            <Text style={styles.buttonText}>Buy Now</Text>
+            <Text style={styles.buttonText}>Explore</Text>
           </TouchableOpacity>
         </ImageBackground>
       </View>
@@ -154,22 +154,25 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   image: {
-    marginTop: 30,
+    marginTop: 20,
     marginHorizontal: 20,
-    elevation: 2,
+    elevation: 1,
+    borderRadius:10,
+   
+    
   },
   tpcard: {
     padding: 25,
-    color: '#fff',
+    color: '#000',
     fontSize: 25,
   },
   button: {
-    backgroundColor: '#0044A7',
+    backgroundColor: '#1D9375',
     borderRadius: 5,
     paddingVertical: 8,
     paddingHorizontal: 15,
     alignSelf: 'flex-end',
-    margin: 20,
+    margin: 10,
   },
   buttonText: {
     color: '#fff',
