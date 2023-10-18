@@ -59,7 +59,7 @@ export default function Signin({navigation}) {
 
        <View style={styles.inputBox3}>
 
-         <Pressable style={styles.gosignup} ><Text style={styles.gosignup1}>Don't you have an account
+         <Pressable style={styles.gosignup} ><Text style={styles.gosignup1}>Don't you have an account ?
         
          </Text></Pressable>
 
@@ -84,23 +84,23 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor:'#000',
     width:'100%',
-    height:770
+    height:844
   },
   btns:{
     position:'absolute',
-    top:630,
-    zIndex:100,
+    top:620,
+    zIndex:50,
     left:50,
 
 
 
   },
   imgf:{
-    width:40,
-    height:40,
+    width:30,
+    height:30,
     position:'absolute',
-    top:5,
-    left:10
+    top:8,
+    left:25
 
   },
   btn1:{
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   btn2:{
    color:'#fff',
    textAlign:'center',
+   top:2,
    fontSize:14
     
 
@@ -138,8 +139,8 @@ const styles = StyleSheet.create({
    color:'#fff',
    textAlign:'center',
    fontSize:14,
-   color:'#000'
-    
+   color:'#000',
+   top:2,
 
   },
   inputBox2:{
@@ -151,7 +152,7 @@ const styles = StyleSheet.create({
   fogpass:{
     position:'absolute',
     top:-65,
-    left:220,
+    left:240,
     width:200
 
 
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
 
   inputBox3:{
     position:'absolute',
-    top:328,
+    top:315,
     left:80
 
   },
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
     
   },
   signin:{
-    marginTop:-18,
+    marginTop:-40,
     marginLeft:120,
     width:165,
     padding:20,
@@ -220,13 +221,13 @@ const styles = StyleSheet.create({
     
   },
   frmgpadd:{
-    marginTop:80,
+    marginTop:40,
   },
   frmg:{
     fontSize:16,
     backgroundColor:'rgba(40, 38, 53, 0.5)',
     height:57,
-    marginTop:15,
+    marginTop:5,
     padding:10,
     width:344,
     marginLeft:20,
@@ -248,7 +249,7 @@ const styles = StyleSheet.create({
     fontSize:46,
     width:250,
     marginLeft:37,
-    marginTop:-85,
+    marginTop:-25,
     color:'#fff',
     fontWeight: 'bold'
 
