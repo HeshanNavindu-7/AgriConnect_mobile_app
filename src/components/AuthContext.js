@@ -11,15 +11,16 @@ export const AuthProvider = ({children}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
 
-  const register = (name, email,number,password) => {
+  const register = (username, email,phone_number,password,password_confirmation) => {
     setIsLoading(true);
 
     axios
-      .post(`${BASE_URL}/sign-up`, {
-        name,
+      .post(`${BASE_URL}/register`, {
         email,
         password,
-        number
+        username,
+        phone_number,
+        password_confirmation
       })
       .then(res => {
         let userInfo = res.data;

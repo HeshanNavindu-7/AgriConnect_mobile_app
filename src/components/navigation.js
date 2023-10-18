@@ -165,10 +165,14 @@ const Navigation = () => {
                 component={Signin}
                 options={{headerShown: false}}
               />
+                <Stack.Screen
+              name="signup"
+              component={Signup}
+              options={{headerShown: false}}
+            />
             </>
           )}
          
-          <Stack.Screen name="signup" component={Signup} />
           <Stack.Screen name="otp" component={OTP} />
         </Stack.Navigator>
       

@@ -1,9 +1,20 @@
 import { View, Text, Button, ImageBackground ,StyleSheet,Image,Pressable, TextInput}  from 'react-native';
-import React from 'react';
+import React, {useContext, useState} from 'react';
 // import PhoneInput from 'react-native-phone-number-input';
+import Spinner from 'react-native-loading-spinner-overlay';
+import {AuthContext} from './AuthContext';
+
 
 
 export default function Signup({navigation}) {
+  const [username, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [phone_number, setNumber] = useState(null);
+  const [password_confirmation, setpassword_confirmation] = useState(null);
+
+  
+  const {isLoading, register} = useContext(AuthContext);
   return (
      <View style={styles.box1}>
 
@@ -16,11 +27,40 @@ export default function Signup({navigation}) {
 
        <View style={styles.inputBox1}>
 
-        <TextInput placeholder='Username' placeholderTextColor='#fff' style={[styles.frmg,styles.frmgpadd]}></TextInput>
-        <TextInput placeholder='E-mail' placeholderTextColor='#fff'  style={styles.frmg}></TextInput>
-        <TextInput placeholder='Phone number' placeholderTextColor='#fff'  style={styles.frmg}></TextInput>
-        <TextInput placeholder='Password' placeholderTextColor='#fff' secureTextEntry style={styles.frmg}></TextInput>
-        <TextInput placeholder='Confirm Password' placeholderTextColor='#fff' secureTextEntry style={styles.frmg}></TextInput>
+        <TextInput 
+        placeholder='Username' 
+        placeholderTextColor='#fff' 
+        style={[styles.frmg,styles.frmgpadd]}
+        onChangeText={text => setName(text)}
+        ></TextInput>
+
+        <TextInput 
+        placeholder='E-mail' 
+        placeholderTextColor='#fff'  
+        style={styles.frmg}
+        onChangeText={text => setEmail(text)}
+        ></TextInput>
+
+        <TextInput 
+        placeholder='Phone number' 
+        placeholderTextColor='#fff'  
+        style={styles.frmg}
+        onChangeText={text => setNumber(text)}
+        ></TextInput>
+
+        <TextInput 
+        placeholder='Password' 
+        placeholderTextColor='#fff' 
+        secureTextEntry style={styles.frmg}
+        onChangeText={text => setPassword(text)}
+        ></TextInput>
+
+        <TextInput 
+        placeholder='Confirm Password' 
+        placeholderTextColor='#fff' 
+        secureTextEntry style={styles.frmg}
+        onChangeText={text => setpassword_confirmation(text)}
+        ></TextInput>
        
 
 
@@ -29,7 +69,7 @@ export default function Signup({navigation}) {
 
          
 
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("otp")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>{register(username, email,phone_number, password,password_confirmation);}} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
 
 
        </View>
@@ -206,7 +246,7 @@ const styles = StyleSheet.create({
     width:165,
     padding:20,
     height:63,
-    backgroundColor:'#1D9375',
+    backgroundColor:'#rgba(0, 68, 167, 1)',
     borderRadius:20,
     position:'absolute',
     zIndex:100
