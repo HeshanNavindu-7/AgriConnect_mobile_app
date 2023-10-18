@@ -1,5 +1,6 @@
-import React from 'react';
+import React ,{useContext} from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { AuthContext } from '../AuthContext';
 
 const Profile1 = () => {
   const user = {
@@ -8,6 +9,8 @@ const Profile1 = () => {
     age: 30,
     location: 'City, Country',
   };
+
+  const{logout} = useContext(AuthContext)
 
   return (
     <View style={styles.container}>
@@ -39,7 +42,7 @@ const Profile1 = () => {
       </View>
 
       {/* Logout Button */}
-      <TouchableOpacity style={styles.logoutButton}>
+      <TouchableOpacity style={styles.logoutButton} onPress={logout}>
         <Text style={styles.logoutButtonText}>Logout</Text>
       </TouchableOpacity>
     </View>
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
   },
   headerImage: {
     width: '100%',
-    height: 200,
+    height: 100,
   },
   profileInfo: {
     padding: 20,
