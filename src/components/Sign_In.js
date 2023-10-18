@@ -1,8 +1,15 @@
 import { View, Text, Button, ImageBackground ,StyleSheet,Image,Pressable, TextInput}  from 'react-native';
-import React from 'react';
+import React, { useContext,useEffect, useState } from 'react';
+import Spinner from 'react-native-loading-spinner-overlay';
+import {AuthContext} from './AuthContext';
 
 
 export default function Signin({navigation}) {
+
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const {isLoading, login} = useContext(AuthContext)
+
   return (
      <View style={styles.container} >
     
@@ -14,8 +21,21 @@ export default function Signin({navigation}) {
 
        <View style={styles.inputBox1}>
 
-        <TextInput placeholder='Email' placeholderTextColor='#fff' style={[styles.frmg,styles.frmgpadd]}></TextInput>
-        <TextInput placeholder='Passoword' placeholderTextColor='#fff' secureTextEntry style={styles.frmg}></TextInput>
+        <TextInput 
+          placeholder='Email' 
+          placeholderTextColor='#fff' 
+          style={[styles.frmg,styles.frmgpadd]}
+          onChangeText={text => setEmail(text)}
+          >
+        </TextInput>
+
+        <TextInput 
+          placeholder='Passoword' 
+          placeholderTextColor='#fff' 
+          secureTextEntry style={styles.frmg}
+          onChangeText={(text)=>setPassword(text)}
+          >
+        </TextInput>
 
 
        </View>
@@ -23,7 +43,7 @@ export default function Signin({navigation}) {
 
          <Pressable style={styles.fogpass} ><Text style={styles.fogpass1}>Forgot your password?</Text></Pressable>
 
-         <Pressable style={styles.signin} onPress={()=> navigation.navigate("Tab")}><Text style={styles.signin1}>Sign in</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> {login(email, password);}}><Text style={styles.signin1}>Sign in</Text></Pressable>
 
        </View>
 
