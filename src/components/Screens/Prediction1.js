@@ -8,12 +8,15 @@ const Prediction1 = () => {
 
   return (
     <ImageBackground
-      source={{ uri: 'https://example.com/path_to_your_background_image.jpg' }}
+      source={require('./img/4vI4.gif')}
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
-        <Text>Get Your Prediction</Text>
-        <Button title="Open Prediction" onPress={openGooglePage} />
+        <Text style={styles.text1}>🌱 Harness the Power of AI for a Bountiful Harvest 🌱
+
+Are you ready to transform your farming experience like never before? Say hello to the future of agriculture with AgriConnect, the ultimate all-in-one agricultural app that combines cutting-edge AI technology with a passion for sustainable farming.</Text>
+        <Text style={styles.text1}>📈 AI-Powered Crop Predictions</Text>
+        <Button style={styles.predictionn} title="Open Predictionn" onPress={openGooglePage} />
       </View>
     </ImageBackground>
   );
@@ -24,6 +27,20 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
+  },
+  predictionn: {
+    backgroundColor: '#1D9375', // Change the button color here
+    top: -120,
+  },
+  text1: {
+    color: '#000',
+    margin: 18,
+    fontSize: 14,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    padding: 8,
+    backgroundColor: 'rgba(255, 255, 255, 0.6)', // Remove the extra 'a' here
+    top: -70,
   },
   container: {
     flex: 1,

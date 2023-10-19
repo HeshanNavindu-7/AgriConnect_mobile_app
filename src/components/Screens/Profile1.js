@@ -1,6 +1,5 @@
-import React ,{useContext} from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { AuthContext } from '../AuthContext';
 
 const Profile1 = () => {
   const user = {
@@ -10,16 +9,11 @@ const Profile1 = () => {
     location: 'City, Country',
   };
 
-  const{logout} = useContext(AuthContext)
-
   return (
     <View style={styles.container}>
       {/* Header Image */}
-      <Image
-        source={{ uri: 'https://www.google.com/search?q=man+photo&rlz=1C1CHBF_enLK1024LK1024&oq=man+photo&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDQ1MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=HFWBSbfeLnUFtM&vssid=l' }} // Replace with your image URL
-        style={styles.headerImage}
-      />
-
+      <Image source={require('./img/man.jpg')}
+                style={{ width: 250, height: 150, borderRadius: 12,marginTop:20 }} />
       {/* User Info */}
       <View style={styles.profileInfo}>
         <Text style={styles.name}>{user.name}</Text>
@@ -42,7 +36,7 @@ const Profile1 = () => {
       </View>
 
       {/* Logout Button */}
-      <TouchableOpacity style={styles.logoutButton} onPress={logout}>
+      <TouchableOpacity style={styles.logoutButton}>
         <Text style={styles.logoutButtonText}>Logout</Text>
       </TouchableOpacity>
     </View>
@@ -62,21 +56,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     borderRadius: 10,
     width: '80%',
-    margin: 10,
+    margin: 5,
   },
   name: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 5,
   },
   email: {
     fontSize: 16,
     color: 'gray',
-    marginBottom: 10,
+    marginBottom: 5,
   },
   age: {
     fontSize: 18,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   location: {
     fontSize: 18,
@@ -89,11 +83,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 10,
     borderRadius: 5,
-    margin: 10,
+    margin: 5,
   },
   buttonText: {
     color: '#000',
     fontSize: 16,
+    width:200,
   },
   logoutButton: {
     backgroundColor: 'red',
