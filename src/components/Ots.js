@@ -8,7 +8,6 @@ export default function OTP({navigation}) {
      <View style={styles.box1}>
           <ImageBackground source={require('./images/s3.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
       
-
         <View style={styles.container1}>
   
         <Text style={styles.title1}>OTP Verification</Text>

@@ -23,7 +23,7 @@ export const AuthProvider = ({children}) => {
         password_confirmation
       })
       .then(res => {
-        let userInfo = res.data;
+        let userInfo = res.data.data;
         setUserInfo(userInfo);
         AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
         setIsLoading(false);
