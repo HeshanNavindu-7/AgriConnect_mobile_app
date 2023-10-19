@@ -12,11 +12,8 @@ const Profile1 = () => {
   return (
     <View style={styles.container}>
       {/* Header Image */}
-      <Image
-        source={{ uri: 'https://www.google.com/search?q=man+photo&rlz=1C1CHBF_enLK1024LK1024&oq=man+photo&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDQ1MDBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=HFWBSbfeLnUFtM&vssid=l' }} // Replace with your image URL
-        style={styles.headerImage}
-      />
-
+      <Image source={require('./img/man.jpg')}
+                style={{ width: 250, height: 150, borderRadius: 12,marginTop:20 }} />
       {/* User Info */}
       <View style={styles.profileInfo}>
         <Text style={styles.name}>{user.name}</Text>
@@ -91,6 +88,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#000',
     fontSize: 16,
+    width:200,
   },
   logoutButton: {
     backgroundColor: 'red',

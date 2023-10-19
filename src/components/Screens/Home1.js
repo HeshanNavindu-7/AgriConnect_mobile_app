@@ -9,6 +9,8 @@ const Home1 = () => {
 
   return (
     <View style={styles.container}>
+        <ImageBackground source={require('./img/s3.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
+
       <View style={styles.container1}>
         <ImageBackground source={require('./img/s3.png') } resizeMode="cover" style={styles.image}>
           <Text style={styles.tpcard}>The Art and Science of Agriculture</Text>
@@ -24,34 +26,41 @@ const Home1 = () => {
         <TouchableOpacity style={styles.card2} >
          
          
-          <Text style={styles.cardtext1} > The Capsule</Text>
+          <Text style={styles.cardtext2} > Weather Forecast</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.card2} >
         
        
-          <Text style={styles.cardtext1} > The Capsule</Text>
+          <Text style={styles.cardtext2} > Crop Management</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.card2} >
           
-          <Text style={styles.cardtext1} > The Capsule</Text>
+          <Text style={styles.cardtext2} >Market Access</Text>
         </TouchableOpacity>
       </View>
       <View>
         <Text style={{
           color: '#000',
-          fontSize: 18,
+    
           marginTop: 15,
           marginLeft: 15,
+          fontSize: 20,
+    fontWeight: 'bold',
+    top:-50,
         }}> Featured Products</Text>
         <View style={styles.McardList}>
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-              <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
+              <Image source={require('./img/apple.jpg')}
                 style={{ width: 170, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>caraway seeds</Text>
+              <Text style={styles.cardtext1}>Apples</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>$20.99</Text>
-                <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
+                <Text style={styles.price}>$1.99</Text>
+                <Button style={{
+          color: '#000',
+                  
+       
+        }} title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
           </View>
@@ -77,6 +86,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffff',
   },
+  btn:{
+    backgroundColor: '#1D9375',
+  },
   rowContainer1: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -87,6 +99,7 @@ const styles = StyleSheet.create({
     color: '#000',
     padding: 10,
     marginLeft: 15,
+    top:-50,
   },
   card1: {
   
@@ -96,12 +109,20 @@ const styles = StyleSheet.create({
   card2: {
     height: 80,
     width: 110,
-  
-    backgroundColor: '#fff',
+  top:-50,
+  backgroundColor:'#BFDECB',
     borderWidth: 0.2,
     borderColor: '#000',
-    borderRadius: 12,
+    borderRadius: 5,
     marginLeft: 20,
+
+  },
+  cardtext2: {
+    textAlign: 'center',
+    color: '#000',
+    margin:12,
+    marginTop:20,
+   
   },
   cardtext1: {
     textAlign: 'center',
@@ -124,6 +145,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'space-evenly', // Space between cards
     flexWrap: 'wrap',
+    top:-50,
   },
   Mcard: {
     height: 200,
@@ -131,13 +153,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     borderColor: '#000',
     borderWidth: 0.5,
+   
   },
-  cardtext1: {
-    fontSize: 16,
-    marginLeft: 10,
-    color: '#000',
-    fontWeight: 'bold',
-  },
+ 
   Msec1: {},
   Msbtn: {
     alignItems: 'flex-end',

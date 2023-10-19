@@ -6,9 +6,7 @@ const Market1 = () => {
 
   return (
     <View style={styles.Msec1}>
-    <ImageBackground source={require('./Screenimages/predictionbg.png') } resizeMode="cover" style={styles.imagebg}></ImageBackground>
-
-      <View style={styles.inputBox1}>
+     <View style={styles.inputBox1}>
         <TextInput
           style={{
             flex: 1,
@@ -38,11 +36,36 @@ const Market1 = () => {
         <View style={styles.McardList}>
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
+              <Image source={require('./img/apple.jpg')}
+                style={{ width: 170, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Apples</Text>
+              <View style={styles.priceAndCart}>
+                <Text style={styles.price}>$1.99</Text>
+                <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
+              </View>
+            </TouchableOpacity>
+          </View>
+       
+          <View style={styles.Mcard}>
+            <TouchableOpacity style={styles.card1}>
               <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
                 style={{ width: 170, height: 130, borderRadius: 12 }} />
               <Text style={styles.cardtext1}>caraway seeds</Text>
               <View style={styles.priceAndCart}>
                 <Text style={styles.price}>$20.99</Text>
+                <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.McardList}>
+          <View style={styles.Mcard}>
+            <TouchableOpacity style={styles.card1}>
+              <Image source={require('./img/apple.jpg')}
+                style={{ width: 170, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Apples</Text>
+              <View style={styles.priceAndCart}>
+                <Text style={styles.price}>$1.99</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
