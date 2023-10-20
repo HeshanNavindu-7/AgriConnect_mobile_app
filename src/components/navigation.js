@@ -174,6 +174,7 @@ const Navigation = () => {
             </>
           )}
            <Stack.Screen name="Tab1"   component={MyTabs} />
+           <Stack.Screen name="otp1" component={OTP} />
         </Stack.Navigator>
       
       </NavigationContainer>

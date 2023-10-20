@@ -67,8 +67,8 @@ export const AuthProvider = ({children}) => {
   };
 
   const logout = () => {
-    AsyncStorage.removeItem('userInfo2');
-    setUserInfo2({});
+    AsyncStorage.removeItem('userInfo');
+    setUserInfo({});
     setIsLoading(false);
   };
 

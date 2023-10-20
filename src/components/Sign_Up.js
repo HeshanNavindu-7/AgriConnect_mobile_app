@@ -69,7 +69,7 @@ export default function Signup({navigation}) {
 
          
 
-         <Pressable style={styles.signin} onPress={()=>{register(username, email,phone_number, password,password_confirmation);}} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=> navigation.navigate("otp1")} ><Text style={styles.signin1}>Sign Up</Text></Pressable>
 
 
        </View>
