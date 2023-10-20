@@ -61,11 +61,11 @@ const Market1 = () => {
         <View style={styles.McardList}>
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-            <Image source={require('./img/Pumpkin.png')}
+            <Image source={require('./img/banana.png')}
                 style={{ width: 167, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>Pumpkin</Text>
+              <Text style={styles.cardtext1}>Banana</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>Rs100</Text>
+                <Text style={styles.price}>Rs400</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
@@ -73,11 +73,11 @@ const Market1 = () => {
        
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-            <Image source={require('./img/RedNadu.jpeg')}
+            <Image source={require('./img/pomegranate.png')}
                 style={{ width: 167, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>Red Nadu Rice</Text>
+              <Text style={styles.cardtext1}>Pomegranate</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>Rs170</Text>
+                <Text style={styles.price}>Rs630</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
