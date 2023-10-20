@@ -25,6 +25,7 @@ Are you ready to transform your farming experience like never before? Say hello 
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
+    width:420,
     resizeMode: 'cover',
     justifyContent: 'center',
   },
