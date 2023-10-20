@@ -36,11 +36,11 @@ const Market1 = () => {
         <View style={styles.McardList}>
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-              <Image source={require('./img/apple.jpg')}
-                style={{ width: 170, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>Apples</Text>
+            <Image source={require('./img/Pumpkin.png')}
+                style={{ width: 167, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Pumpkin</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>$1.99</Text>
+                <Text style={styles.price}>Rs100</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
@@ -48,11 +48,11 @@ const Market1 = () => {
        
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-              <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
-                style={{ width: 170, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>caraway seeds</Text>
+            <Image source={require('./img/RedNadu.jpeg')}
+                style={{ width: 167, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Red Nadu Rice</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>$20.99</Text>
+                <Text style={styles.price}>Rs170</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
@@ -61,11 +61,11 @@ const Market1 = () => {
         <View style={styles.McardList}>
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-              <Image source={require('./img/apple.jpg')}
-                style={{ width: 170, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>Apples</Text>
+            <Image source={require('./img/Pumpkin.png')}
+                style={{ width: 167, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Pumpkin</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>$1.99</Text>
+                <Text style={styles.price}>Rs100</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>
@@ -73,11 +73,11 @@ const Market1 = () => {
        
           <View style={styles.Mcard}>
             <TouchableOpacity style={styles.card1}>
-              <Image source={{ uri: 'https://cdn.britannica.com/16/126416-004-26319BEE/Caraway-seeds.jpg?w=300' }}
-                style={{ width: 170, height: 130, borderRadius: 12 }} />
-              <Text style={styles.cardtext1}>caraway seeds</Text>
+            <Image source={require('./img/RedNadu.jpeg')}
+                style={{ width: 167, height: 130, borderRadius: 12 }} />
+              <Text style={styles.cardtext1}>Red Nadu Rice</Text>
               <View style={styles.priceAndCart}>
-                <Text style={styles.price}>$20.99</Text>
+                <Text style={styles.price}>Rs170</Text>
                 <Button title="Add Cart" onPress={() => alert('Added to Cart')} />
               </View>
             </TouchableOpacity>

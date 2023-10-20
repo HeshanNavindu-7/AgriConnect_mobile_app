@@ -19,7 +19,7 @@ export default function OTP({navigation}) {
 
 </View>
 <View style={styles.btnsend}>
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Tab")} ><Text style={styles.signin1}>Send OTP</Text></Pressable>
+         <Pressable style={styles.signin} ><Text style={styles.signin1}>Send OTP</Text></Pressable>
         </View>
        
         <Text style={styles.description1}>Enter the OTP Code</Text>
@@ -44,7 +44,7 @@ export default function OTP({navigation}) {
 
          <Text style={styles.codedes}>Didn’t receive code? </Text>
 
-          <Pressable style={styles.signup} onPress={()=> navigation.navigate("signup")}><Text style={styles.resend1} >Resend</Text></Pressable>
+          <Pressable style={styles.signup} ><Text style={styles.resend1} >Resend</Text></Pressable>
 
        </View>
       

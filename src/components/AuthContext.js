@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
   const [userInfo, setUserInfo] = useState({});
+  const [userInfo2, setUserInfo2] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
 
@@ -22,11 +23,11 @@ export const AuthProvider = ({children}) => {
         password_confirmation
       })
       .then(res => {
-        let userInfo = res.data.data;
-        setUserInfo(userInfo);
-        AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
+        let userInfo2 = res.data.data;
+        setUserInfo2(userInfo2);
+        AsyncStorage.setItem('userInfo2', JSON.stringify(userInfo2));
         setIsLoading(false);
-        console.log(userInfo);
+        console.log(userInfo2);
       })
       .catch(e => {
         console.log(`register error ${e}`);
@@ -99,6 +100,7 @@ export const AuthProvider = ({children}) => {
       value={{
         isLoading,
         userInfo,
+        userInfo2,
         splashLoading,
         register,
         login,

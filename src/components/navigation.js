@@ -139,7 +139,7 @@ function HomeScreen() {
 const Stack = createStackNavigator();
 const Navigation = () => {
 
-    const {userInfo, splashLoading} = useContext(AuthContext);
+    const {userInfo,userInfo2, splashLoading} = useContext(AuthContext);
 
     return (
       
@@ -155,7 +155,7 @@ const Navigation = () => {
             />
           ) : userInfo.username ? (
             <Stack.Screen name="Tab"   component={MyTabs} />
-          ) : userInfo.email_verified_at ? (
+          ) : userInfo2.username ? (
             <Stack.Screen name="otp" component={OTP} />
           ) : (
             <>
@@ -173,8 +173,7 @@ const Navigation = () => {
             />
             </>
           )}
-         
-          {/* <Stack.Screen name="otp" component={OTP} /> */}
+           <Stack.Screen name="Tab"   component={MyTabs} />
         </Stack.Navigator>
       
       </NavigationContainer>
