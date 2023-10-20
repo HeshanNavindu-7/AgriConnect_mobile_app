@@ -173,7 +173,7 @@ const Navigation = () => {
             />
             </>
           )}
-           <Stack.Screen name="Tab"   component={MyTabs} />
+           <Stack.Screen name="Tab1"   component={MyTabs} />
         </Stack.Navigator>
       
       </NavigationContainer>

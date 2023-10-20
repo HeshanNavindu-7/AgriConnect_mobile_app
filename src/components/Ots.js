@@ -49,7 +49,7 @@ export default function OTP({navigation}) {
        </View>
       
        <View style={styles.inputBox}>
-         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Tab")} ><Text style={styles.signin1}>Verify</Text></Pressable>
+         <Pressable style={styles.signin} onPress={()=>navigation.navigate("Tab1")} ><Text style={styles.signin1}>Verify</Text></Pressable>
         </View>
        
     </View>
