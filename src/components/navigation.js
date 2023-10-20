@@ -11,9 +11,8 @@ import Home1 from './Screens/Home1';
 import Prediction1 from './Screens/Prediction1';
 import Market1 from './Screens/Market1';
 import Profile1 from './Screens/Profile1';
-import { Ionicons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {AuthContext} from './AuthContext';
@@ -156,6 +155,8 @@ const Navigation = () => {
             />
           ) : userInfo.username ? (
             <Stack.Screen name="Tab"   component={MyTabs} />
+          ) : userInfo.email_verified_at ? (
+            <Stack.Screen name="otp" component={OTP} />
           ) : (
             <>
             <Stack.Screen name="firstpage" component={FirstPage} />
@@ -173,7 +174,7 @@ const Navigation = () => {
             </>
           )}
          
-          <Stack.Screen name="otp" component={OTP} />
+          {/* <Stack.Screen name="otp" component={OTP} /> */}
         </Stack.Navigator>
       
       </NavigationContainer>

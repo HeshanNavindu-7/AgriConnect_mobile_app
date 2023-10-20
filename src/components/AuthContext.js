@@ -2,7 +2,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React, {createContext, useEffect, useState} from 'react';
 import {BASE_URL,SIGNIN_URL} from '../config';
-import Navigation from './navigation';
 
 export const AuthContext = createContext();
 
